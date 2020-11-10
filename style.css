@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  cursor: default;
+  background-color: rgb(28, 40, 51);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: teal;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar > ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.2rem;
+  color: #eee;
+}
+
+.nav-link {
+  display: flex;
+}
+.nav-link > a {
+  display: block;
+  padding: 1.5rem 1rem;
+  text-shadow: 2px 3px 2px black;
+}
+
+h1 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 500ms, color 500ms;
+}
+a:hover {
+  background-color: rgb(28, 40, 51);
+}
+
+.welcome-section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(28, 40, 51);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 5rem;
+  color: #eee;
+  font-weight: 400;
+  text-shadow: 5px 4px 5px black;
+  margin-bottom: 1rem;
+  transition: color 500ms;
+}
+
+.title:hover {
+  color: tomato;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: tomato;
+  text-shadow: 5px 5px 5px black;
+  transition: color 500ms;
+  margin-bottom: 1rem;
+}
+
+.subtitle:hover {
+  color: #eee;
+}
+
+.projects-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: tomato;
+}
+
+.projects-wrapper {
+  padding: 7.5rem 3rem;
+  text-align: center;
+}
+
+.project-grid {
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+  grid-gap: 3rem;
+}
+
+.project-tile {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(28, 40, 51);
+  color: #eee;
+  transition: box-shadow 500ms;
+}
+
+.project-tile:hover {
+  box-shadow: 0px 0px 10px rgb(28, 40, 51);
+}
+
+.pj-image {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.pj-title {
+  font-size: 2rem;
+  padding: 1rem;
+  text-decoration: underline rgb(28, 40, 51) 2px;
+  transition: text-decoration 500ms ease-out;
+}
+
+.quote {
+  color: rgb(28, 40, 51);
+  transition: color 500ms ease-out;
+}
+
+.pj-link:hover .pj-title {
+  text-decoration: underline tomato 2px;
+}
+
+.pj-link:hover .quote {
+  color: tomato;
+}
+
+.mp {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+}
+
+.mp:hover {
+  color: rgb(28, 40, 51);
+}
+
+.contact-section {
+  width: 100%;
+  height: calc(90vh - 74px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  padding: 7.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fp {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+}
+
+.social-media {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  color: #eee;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  width: 100px;
+}
+
+.flex-item:hover {
+  animation-name: move;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.4, 0.7, 0.7);
+}
+
+@keyframes move {
+  0% {
+    position: relative;
+    top: 0;
+  }
+  50% {
+    position: relative;
+    top: 1rem;
+  }
+  100% {
+    position: relative;
+    top: 0;
+  }
+}
+
+.contact-link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: tomato;
+  padding: 1rem;
+}
+
+.contact-link:hover {
+  background-color: transparent;
+}
+
+footer {
+  height: 10vh;
+  border-top: 3px solid tomato;
+  color: #eee;
+  text-shadow: 2px 3px 2px black;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 360px) {
+  .nav-bar {
+    justify-content: flex-end;
+  }
+  .nav-bar > ul {
+    margin-right: 0;
+    justify-content: flex-end;
+  }
+  .nav-link > a {
+    padding: 2rem 1.35rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link a {
+    padding: 2rem 2rem;
+  }
+}
